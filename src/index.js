@@ -28,9 +28,16 @@ const Application = () => {
         placeholder='Type your name' 
       />
       <Button text="Reset" reset={reset} />
-      <h1>Hello {name}</h1>
+      {/* renders if anything is inputted into the text field */}
+      {!name == 0 && <h1>Hello {name}</h1>}
+      {/* renders nothing is inputted into text field */}
+      {name === "" && <h1></h1>}
     </main>
   );
 };
 
 ReactDOM.render(<Application />, document.getElementById("root"));
+
+
+
+
