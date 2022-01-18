@@ -5,12 +5,14 @@ import './index.css';
 const Button = (props) => {
   // your code here
   return (
-    <button>{props.text}</button>
+    <button onClick={props.reset}>
+      {props.text}
+    </button>
   );
 };
 
 const Application = () => {
-
+  
   const reset = () => {
     console.log("reset");
     // your code here
@@ -18,7 +20,7 @@ const Application = () => {
 
   return (
     <main>
-      <Button text="Reset" />
+      <Button text="Reset" reset={reset} />
       <h1>Hello React</h1>
     </main>
   );
